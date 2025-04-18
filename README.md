@@ -8,10 +8,9 @@
 4. Install the contents of `github.com/jeremyalv/bouncerr` using curl (no need to Git clone)
 
    ```bash
-    curl -L https://github.com/jeremyalv/bouncerr/archive/refs/tags/v1.0.0.zip -o temp.zip && \
-    unzip temp.zip && \
-    mv bouncerr-1.0.0/* . && \
-    rm -r bouncerr-1.0.0 temp.zip
+      curl -L https://github.com/jeremyalv/bouncerr/releases/download/1.0.0/bouncerr-1.0.0.zip -o bouncerr-1.0.0 && \
+      unzip bouncerr-1.0.0 && \
+      rm -r bouncerr-1.0.0
    ```
 
 # Usage
