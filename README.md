@@ -19,3 +19,6 @@
 3. Running the `https://github.com/gherynos/pre-commit-java` hook requires you to start Docker daemon on your machine (open Docker app). If you wish to disable this behavior, feel free to comment the hook in the config yaml file.
 4. When you're ready to commit your changes, run `git commit` as usual and bouncerr will perform checks to ensure your project fulfills the established code quality
 5. If you add any other pre-commit repo to the config, update using `pre-commit autoupdate`
+
+# Notes
+If the `pre-commit-java` hook failed even while starting docker, check if your docker has adaquate permisisons. To grant the permissions, run `sudo chown -R $(whoami) ~/.docker`
