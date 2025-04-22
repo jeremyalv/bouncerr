@@ -35,10 +35,3 @@ repos:
         args:
           - "--timeout=5m"
       - id: golangci-lint-fmt
-
-  - repo: https://github.com/gherynos/pre-commit-java
-    rev: v0.6.12
-    hooks:
-      - id: pmd
-      - id: cpd
-      - id: checkstyle
