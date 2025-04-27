@@ -6,6 +6,7 @@
 <module name="Checker">
     <property name="charset" value="UTF-8"/>
     <property name="severity" value="error"/>
+
     <property name="fileExtensions" value="java"/>
 
     <!-- File Structure Checks -->
@@ -16,6 +17,10 @@
     <module name="LineLength">
         <property name="max" value="120"/>
         <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
+    </module>
+
+    <module name="SuppressionFilter">
+        <property name="file" value="${checkstyle.suppressions.file}" />
     </module>
 
     <module name="TreeWalker">
@@ -129,8 +134,8 @@
         <module name="ImportOrder">
             <property name="option" value="top"/>
             <property name="sortStaticImportsAlphabetically" value="true"/>
-            <!-- com.gojek should refer to your internal package prefixes -->
-            <property name="groups" value="/^java\./, /^javax\./, com.gojek, *"/>
+            <!-- com.company should refer to your internal package prefixes -->
+            <property name="groups" value="/^java\./, /^javax\./, com.company, *"/>
             <property name="ordered" value="true"/>
             <!-- Package/Import statements separated by blank lines -->
             <property name="separated" value="true"/>
@@ -195,5 +200,6 @@
             <property name="allowMultipleEmptyLinesInsideClassMembers" value="false"/> <!-- Enforce single blank lines inside methods -->
             <property name="tokens" value="PACKAGE_DEF, IMPORT, STATIC_IMPORT, CLASS_DEF, INTERFACE_DEF, ENUM_DEF, STATIC_INIT, INSTANCE_INIT, METHOD_DEF, CTOR_DEF, VARIABLE_DEF, RECORD_DEF, COMPACT_CTOR_DEF"/>
         </module>
+
     </module>
 </module>
