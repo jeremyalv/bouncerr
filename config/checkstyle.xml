@@ -116,12 +116,10 @@
             <property name="format" value="^[a-z]([a-zA-Z0-9]*)?$"/>
         </module>
         <module name="MemberName">
-            <!-- Mixed case, lowercase first letter. -->
-            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <property name="format" value="^[a-zA-Z0-9]*$"/>
         </module>
         <module name="LocalVariableName">
-            <!-- Mixed case, lowercase first letter. Avoid single char except throwaway. -->
-            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <property name="format" value="^[a-zA-Z0-9]*$"/>
             <property name="allowOneCharVarInForLoop" value="true"/> <!-- Allow i, j, k in loops -->
         </module>
         <module name="ConstantName"/>

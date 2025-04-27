@@ -24,13 +24,10 @@ repos:
     hooks:
       - id: gitleaks
 
-  - repo: local
+  - repo: https://github.com/golangci/golangci-lint
+    rev: v2.1.2
     hooks:
-      - id: gradle-checkstyle
-        name: Custom Checkstyle
-        entry: ./gradlew check --quiet
-        language: system
-        types: [java]
-        pass_filenames: false
-        verbose: true
-        stages: [commit]
+      - id: golangci-lint
+        args:
+          - "--timeout=5m"
+      - id: golangci-lint-fmt

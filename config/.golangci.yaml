@@ -1,0 +1,6 @@
+version: "3"
+formatters:
+  enable:
+    gci
+    gofumpt
+    golines
