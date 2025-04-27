@@ -1,6 +1,15 @@
-version: "3"
+version: "2"
 formatters:
   enable:
-    gci
-    gofumpt
-    golines
+    - gci
+    - gofumpt
+    - golines
+linters:
+  settings:
+    staticcheck:
+      checks:
+        - "all"
+        - "-ST1000"
+        - "-ST1020"
+        - "-ST1021"
+        - "-ST1022"
