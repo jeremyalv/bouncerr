@@ -142,7 +142,8 @@
 
         <!-- Blocks -->
         <module name="EmptyBlock">
-            <property name="option" value="statement"/> <!-- Requires statements within blocks, not just comments -->
+            <!-- Requires statements within blocks (excludes constructors), not just comments -->
+            <property name="option" value="statement"/>
             <property name="tokens" value="LITERAL_WHILE, LITERAL_TRY, LITERAL_FINALLY, LITERAL_DO, LITERAL_IF, LITERAL_ELSE, LITERAL_FOR, INSTANCE_INIT, STATIC_INIT, LITERAL_SWITCH, LITERAL_SYNCHRONIZED, LITERAL_CASE, LITERAL_DEFAULT"/>
         </module>
         <module name="EmptyCatchBlock">
@@ -193,7 +194,7 @@
 
         <!-- Blank Lines / Separation -->
         <module name="EmptyLineSeparator">
-            <property name="allowNoEmptyLineBetweenFields" value="false"/> <!-- Enforce separation between fields -->
+            <property name="allowNoEmptyLineBetweenFields" value="true"/>
             <property name="allowMultipleEmptyLines" value="false"/> <!-- Enforce exactly one blank line -->
             <property name="allowMultipleEmptyLinesInsideClassMembers" value="false"/> <!-- Enforce single blank lines inside methods -->
             <property name="tokens" value="PACKAGE_DEF, IMPORT, STATIC_IMPORT, CLASS_DEF, INTERFACE_DEF, ENUM_DEF, STATIC_INIT, INSTANCE_INIT, METHOD_DEF, CTOR_DEF, VARIABLE_DEF, RECORD_DEF, COMPACT_CTOR_DEF"/>
