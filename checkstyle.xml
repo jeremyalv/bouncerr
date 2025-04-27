@@ -31,7 +31,7 @@
 
         <!-- Braces -->
         <module name="NeedBraces">
-            <property name="tokens" value="LITERAL_IF, LITERAL_ELSE, LITERAL_FOR, LITERAL_WHILE, LITERAL_DO, LAMBDA, METHOD_REF"/>
+            <property name="tokens" value="LITERAL_IF, LITERAL_ELSE, LITERAL_FOR, LITERAL_WHILE, LITERAL_DO, LAMBDA"/>
         </module>
         <module name="LeftCurly">
             <!-- Open brace "{" appears at the end of the same line -->
@@ -40,7 +40,7 @@
         <module name="RightCurly">
             <!-- Closing brace "}" starts a line by itself indented -->
             <property name="option" value="alone"/>
-            <property name="tokens" value="CLASS_DEF, METHOD_DEF, CTOR_DEF, LITERAL_FOR, LITERAL_WHILE, LITERAL_DO, STATIC_INIT, INSTANCE_INIT, ANNOTATION_DEF, ENUM_DEF, INTERFACE_DEF, RECORD_DEF, COMPACT_CTOR_DEF, LITERAL_TRY, LITERAL_CATCH, LITERAL_FINALLY, LITERAL_IF, LITERAL_ELSE, LITERAL_SWITCH"/>
+            <property name="tokens" value="CLASS_DEF, METHOD_DEF, CTOR_DEF, LITERAL_FOR, LITERAL_WHILE, LITERAL_DO, STATIC_INIT, INSTANCE_INIT, ANNOTATION_DEF, ENUM_DEF, INTERFACE_DEF, RECORD_DEF, COMPACT_CTOR_DEF, LITERAL_TRY, LITERAL_CATCH, LITERAL_FINALLY, LITERAL_IF, LITERAL_ELSE"/>
         </module>
 
         <!-- Whitespace -->
@@ -51,7 +51,7 @@
             <!-- Keyword followed by parenthesis separated by space -->
             <!-- Comma in argument list followed by space -->
             <!-- Casts followed by space -->
-            <property name="tokens" value="COMMA, SEMI, TYPECAST, LITERAL_IF, LITERAL_ELSE, LITERAL_WHILE, LITERAL_DO, LITERAL_FOR, LITERAL_SWITCH, LITERAL_SYNCHRONIZED, LITERAL_TRY, LITERAL_CATCH, LITERAL_FINALLY"/>
+            <property name="tokens" value="COMMA, SEMI, TYPECAST, LITERAL_IF, LITERAL_ELSE, LITERAL_WHILE, LITERAL_DO, LITERAL_FOR"/>
         </module>
         <module name="WhitespaceAround">
             <property name="allowEmptyConstructors" value="true"/>
@@ -87,7 +87,7 @@
         <module name="TypeName">
             <property name="id" value="regularClassName"/>
             <!-- mixed case, first letter caps. No Test suffix. -->
-            <property name="format" value="^[A-Z][a-zA-Z0-9]*$(?<!Test)$"/>
+            <property name="format" value="^[A-Z][a-zA-Z0-9]*$"/>
             <property name="tokens" value="CLASS_DEF, INTERFACE_DEF, ENUM_DEF, ANNOTATION_DEF, RECORD_DEF"/>
         </module>
         <module name="TypeName">
@@ -181,17 +181,12 @@
             <property name="severity" value="error"/>
             <property name="ignoreComments" value="false"/>
         </module>
-        <module name="RegexpMultiline">
-            <property name="id" value="blockBlockComments"/>
-             <!-- Forbid /* */ comments (excluding Javadoc /** */) -->
-            <property name="format" value="/\*(?!\*)[^*]*\*+(?:[^/*][^*]*\*+)*/"/>
-             <property name="message" value="Block comments (/* */) are forbidden. Use Javadoc (/** */) only if absolutely necessary."/>
-            <property name="severity" value="error"/>
-        </module>
 
         <!-- Miscellaneous -->
         <module name="UpperEll"/>
-        <module name="ArrayTypeStyle" value="java"/>
+        <module name="ArrayTypeStyle">
+            <property name="javaStyle" value="true"/>
+        </module>
 
         <!-- Blank Lines / Separation -->
         <module name="EmptyLineSeparator">
