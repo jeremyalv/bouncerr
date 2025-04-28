@@ -110,7 +110,7 @@
         <module name="MethodName">
             <property name="id" value="testMethodName"/>
             <!-- camelCase_withUnderscore_separators for tests. -->
-            <property name="format" value="^[a-z][a-zA-Z0-9]*(_[a-zA-Z0-9]+)*$"/>
+            <property name="format" value="^(given)[A-Z]\w*(_when)[A-Z]\w*(_then)[A-Z]\w*$"/>
         </module>
         <module name="ParameterName">
             <!-- Mixed case, lowercase first letter -->
