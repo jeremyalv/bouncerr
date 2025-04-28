@@ -152,7 +152,6 @@
         </module>
 
         <!-- Class Design -->
-        <module name="HideUtilityClassConstructor"/>
         <module name="VisibilityModifier">
             <property name="packageAllowed" value="true"/>
             <property name="protectedAllowed" value="true"/>
