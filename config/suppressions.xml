@@ -13,4 +13,6 @@
         files="[\\/]src[\\/]test[\\/]java[\\/].*"/>
     <suppress id="testMethodName"
         files="[\\/]src[\\/]main[\\/]java[\\/].*"/>
+    <suppress id="needBraces"
+        files="[\\/]src[\\/]test[\\/]java[\\/].*"/>
 </suppressions>

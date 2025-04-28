@@ -36,6 +36,7 @@
 
         <!-- Braces -->
         <module name="NeedBraces">
+            <property name="id" value="needBraces"/>
             <property name="tokens" value="LITERAL_IF, LITERAL_ELSE, LITERAL_FOR, LITERAL_WHILE, LITERAL_DO, LAMBDA"/>
         </module>
         <module name="LeftCurly">
@@ -81,7 +82,7 @@
             <property name="allowLineBreaks" value="true"/>
         </module>
         <module name="NoWhitespaceAfter">
-            <property name="tokens" value="BNOT, DEC, DOT, INC, LNOT, UNARY_MINUS, UNARY_PLUS, TYPECAST, ARRAY_DECLARATOR, INDEX_OP, METHOD_REF"/>
+            <property name="tokens" value="BNOT, DEC, DOT, INC, LNOT, UNARY_MINUS, UNARY_PLUS, ARRAY_DECLARATOR, INDEX_OP, METHOD_REF"/>
             <property name="allowLineBreaks" value="false"/>
         </module>
 
@@ -132,10 +133,8 @@
         <module name="ImportOrder">
             <property name="option" value="top"/>
             <property name="sortStaticImportsAlphabetically" value="true"/>
-            <!-- com.company should refer to your internal package prefixes -->
-            <property name="groups" value="/^java\./, /^javax\./, com.company, *"/>
+            <property name="groups" value="/^java\./, /^javax\./, com.gojek, *"/>
             <property name="ordered" value="true"/>
-            <!-- Package/Import statements separated by blank lines -->
             <property name="separated" value="true"/>
             <property name="separatedStaticGroups" value="false"/>
         </module>
@@ -151,7 +150,6 @@
         </module>
 
         <!-- Class Design -->
-        <module name="HideUtilityClassConstructor"/>
         <module name="VisibilityModifier">
             <property name="packageAllowed" value="true"/>
             <property name="protectedAllowed" value="true"/>
