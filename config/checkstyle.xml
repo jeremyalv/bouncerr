@@ -115,7 +115,7 @@
             <property name="format" value="^[a-zA-Z0-9]*$"/>
         </module>
         <module name="LocalVariableName">
-            <property name="format" value="^[a-zA-Z0-9]*$"/>
+            <property name="format" value="^([a-z][a-zA-Z0-9]*|[A-Z]+(_[A-Z0-9]+)*)$"/>
             <property name="allowOneCharVarInForLoop" value="true"/> <!-- Allow i, j, k in loops -->
         </module>
         <module name="ConstantName"/>
