@@ -44,8 +44,6 @@
             <property name="option" value="eol"/>
         </module>
         <module name="RightCurly">
-            <!-- Closing brace "}" starts a line by itself indented -->
-            <property name="option" value="alone"/>
             <property name="tokens" value="CLASS_DEF, METHOD_DEF, CTOR_DEF, LITERAL_FOR, LITERAL_WHILE, LITERAL_DO, STATIC_INIT, INSTANCE_INIT, ANNOTATION_DEF, ENUM_DEF, INTERFACE_DEF, RECORD_DEF, COMPACT_CTOR_DEF, LITERAL_TRY, LITERAL_CATCH, LITERAL_FINALLY, LITERAL_ELSE"/>
         </module>
 
