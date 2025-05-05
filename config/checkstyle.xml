@@ -152,7 +152,6 @@
         <module name="OneTopLevelClass"/> <!-- A single public class per file -->
 
         <!-- Coding -->
-        <module name="EqualsHashCode"/>
         <module name="SimplifyBooleanExpression"/>
         <module name="SimplifyBooleanReturn"/>
         <module name="StringLiteralEquality"/>
