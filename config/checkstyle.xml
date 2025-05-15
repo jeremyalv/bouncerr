@@ -9,7 +9,6 @@
 
     <property name="fileExtensions" value="java"/>
 
-    <!-- File Structure Checks -->
     <module name="FileTabCharacter">
         <property name="eachLine" value="true"/>
     </module>
@@ -24,7 +23,6 @@
     </module>
 
     <module name="TreeWalker">
-        <!-- Indentation -->
         <module name="Indentation">
             <property name="basicOffset" value="4"/>
             <property name="braceAdjustment" value="0"/>
@@ -34,24 +32,16 @@
             <property name="arrayInitIndent" value="4"/>
         </module>
 
-        <!-- Braces -->
         <module name="NeedBraces">
             <property name="id" value="needBraces"/>
             <property name="tokens" value="LITERAL_IF, LITERAL_ELSE, LITERAL_FOR, LITERAL_WHILE, LITERAL_DO, LAMBDA"/>
         </module>
         <module name="LeftCurly">
-            <!-- Open brace "{" appears at the end of the same line -->
             <property name="option" value="eol"/>
         </module>
 
-        <!-- Whitespace -->
-        <module name="SingleSpaceSeparator">
-            <!-- Prevents double spaces -->
-        </module>
+        <module name="SingleSpaceSeparator"></module>
         <module name="WhitespaceAfter">
-            <!-- Keyword followed by parenthesis separated by space -->
-            <!-- Comma in argument list followed by space -->
-            <!-- Casts followed by space -->
             <property name="tokens" value="COMMA, SEMI, TYPECAST, LITERAL_IF, LITERAL_ELSE, LITERAL_WHILE, LITERAL_DO, LITERAL_FOR"/>
         </module>
         <module name="WhitespaceAround">
@@ -64,13 +54,10 @@
         </module>
 
         <module name="MethodParamPad">
-            <!-- No space between method name and opening parenthesis -->
         </module>
         <module name="ParenPad">
-            <!-- No space inside parentheses -->
         </module>
         <module name="TypecastParenPad">
-            <!-- No space inside type cast parentheses -->
         </module>
         <module name="NoWhitespaceBefore">
             <property name="tokens" value="COMMA, SEMI, POST_INC, POST_DEC, DOT, METHOD_REF"/>
@@ -81,34 +68,28 @@
             <property name="allowLineBreaks" value="false"/>
         </module>
 
-        <!-- Naming Conventions -->
         <module name="PackageName">
             <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$"/>
         </module>
         <module name="TypeName">
             <property name="id" value="regularClassName"/>
-            <!-- mixed case, first letter caps. No Test suffix. -->
             <property name="format" value="^[A-Z][a-zA-Z0-9]*$"/>
             <property name="tokens" value="CLASS_DEF, INTERFACE_DEF, ENUM_DEF, ANNOTATION_DEF, RECORD_DEF"/>
         </module>
         <module name="TypeName">
             <property name="id" value="testClassName"/>
-            <!-- test classes must end in Test. -->
             <property name="format" value="^[A-Z][a-zA-Z0-9]*Test$"/>
             <property name="tokens" value="CLASS_DEF"/>
         </module>
         <module name="MethodName">
             <property name="id" value="regularMethodName"/>
-            <!-- verbs, mixed case, first letter lowercase. -->
             <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
         </module>
         <module name="MethodName">
             <property name="id" value="testMethodName"/>
-            <!-- camelCase_withUnderscore_separators for tests. -->
             <property name="format" value="^(given)[A-Z]\w*(_when)[A-Z]\w*(_then)[A-Z]\w*$"/>
         </module>
         <module name="ParameterName">
-            <!-- Mixed case, lowercase first letter -->
             <property name="format" value="^[a-z]([a-zA-Z0-9]*)?$"/>
         </module>
         <module name="MemberName">
@@ -116,11 +97,10 @@
         </module>
         <module name="LocalVariableName">
             <property name="format" value="^([a-z][a-zA-Z0-9]*|[A-Z]+(_[A-Z0-9]+)*)$"/>
-            <property name="allowOneCharVarInForLoop" value="true"/> <!-- Allow i, j, k in loops -->
+            <property name="allowOneCharVarInForLoop" value="true"/>
         </module>
         <module name="ConstantName"/>
 
-        <!-- Imports and ImportOrder -->
         <module name="AvoidStarImport"/>
         <module name="IllegalImport"/>
         <module name="RedundantImport"/>
@@ -134,9 +114,7 @@
             <property name="separatedStaticGroups" value="false"/>
         </module>
 
-        <!-- Blocks -->
         <module name="EmptyBlock">
-            <!-- Requires statements within blocks (excludes constructors), not just comments -->
             <property name="option" value="statement"/>
             <property name="tokens" value="LITERAL_WHILE, LITERAL_TRY, LITERAL_FINALLY, LITERAL_DO, LITERAL_IF, LITERAL_ELSE, LITERAL_FOR, INSTANCE_INIT, STATIC_INIT, LITERAL_SWITCH, LITERAL_SYNCHRONIZED, LITERAL_CASE, LITERAL_DEFAULT"/>
         </module>
@@ -144,53 +122,45 @@
             <property name="exceptionVariableName" value="expected|ignore(d)?"/>
         </module>
 
-        <!-- Class Design -->
         <module name="VisibilityModifier">
             <property name="packageAllowed" value="true"/>
             <property name="protectedAllowed" value="true"/>
         </module>
-        <module name="OneTopLevelClass"/> <!-- A single public class per file -->
+        <module name="OneTopLevelClass"/>
 
-        <!-- Coding -->
         <module name="SimplifyBooleanExpression"/>
         <module name="SimplifyBooleanReturn"/>
         <module name="StringLiteralEquality"/>
         <module name="NoFinalizer"/>
         <module name="DefaultComesLast"/>
         <module name="FallThrough"/>
-        <module name="MultipleVariableDeclarations"/> <!-- One declaration per line -->
-        <module name="ModifierOrder"/> <!-- Sun modifier order -->
-        <module name="EmptyStatement"/> <!-- Discourage standalone ';' -->
-        <module name="DeclarationOrder"/> <!-- Class vars, instance vars, methods -->
+        <module name="MultipleVariableDeclarations"/>
+        <module name="ModifierOrder"/>
+        <module name="EmptyStatement"/>
+        <module name="DeclarationOrder"/>
 
-        <!-- Comments -->
         <module name="TodoComment">
-            <!-- Flag TODO/todo/FIXME as errors -->
             <property name="format" value="(TODO)|(todo)|(FIXME)"/>
             <property name="severity" value="error"/>
         </module>
         <module name="RegexpSinglelineJava">
             <property name="id" value="blockSingleLineComments"/>
-            <!-- Forbid // comments -->
             <property name="format" value="//.*"/>
             <property name="message" value="Single-line comments (//) are forbidden."/>
             <property name="severity" value="error"/>
             <property name="ignoreComments" value="false"/>
         </module>
 
-        <!-- Miscellaneous -->
         <module name="UpperEll"/>
         <module name="ArrayTypeStyle">
             <property name="javaStyle" value="true"/>
         </module>
 
-        <!-- Blank Lines / Separation -->
         <module name="EmptyLineSeparator">
             <property name="allowNoEmptyLineBetweenFields" value="true"/>
-            <property name="allowMultipleEmptyLines" value="false"/> <!-- Enforce exactly one blank line -->
-            <property name="allowMultipleEmptyLinesInsideClassMembers" value="false"/> <!-- Enforce single blank lines inside methods -->
+            <property name="allowMultipleEmptyLines" value="false"/>
+            <property name="allowMultipleEmptyLinesInsideClassMembers" value="false"/>
             <property name="tokens" value="PACKAGE_DEF, IMPORT, STATIC_IMPORT, CLASS_DEF, INTERFACE_DEF, ENUM_DEF, STATIC_INIT, INSTANCE_INIT, METHOD_DEF, CTOR_DEF, VARIABLE_DEF, RECORD_DEF, COMPACT_CTOR_DEF"/>
         </module>
-
     </module>
 </module>
